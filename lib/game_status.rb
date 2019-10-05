@@ -46,7 +46,9 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) != nil
-    winner = board[won?(board)[0]]
+  win_char = nil
+  if won?(board).class == Array
+    win_char = board[won?(board)[0]]
   end
+  return win_char
 end
